@@ -1,0 +1,109 @@
+
+@media screen and (max-width:1200px) {
+    .main{
+        padding: 40px;
+    }
+    .aside{
+        padding:25px;
+    }
+}
+@media screen and (max-width:991px) {
+    .main{
+        padding: 40px;
+        width: 100%;
+        .main__label{
+            display: flex;
+            justify-content: space-between;
+            span:last-child{
+                display: flex;
+            }
+        }
+        .category:checked ~ .joke-form__category{
+          display: flex;
+          flex-wrap: wrap;
+          label{
+            margin-top: 10px;
+          }
+      }
+    }
+    .aside{
+        display: none;
+        height: 100%;
+        padding:68px 40px 40px;
+        .aside__label{
+            display: none;
+        }
+    }
+    .main__burger{
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        margin-right: 40px;
+        font-size: 20px;
+        line-height: 28px;
+        color: #ABABAB;
+        cursor: pointer;
+        svg{
+            margin-right: 10px;
+        }
+    }
+    .opened{
+        display: flex;
+        position: relative;
+        .svg-closedMenu{
+            display: none;
+        }
+        .svg-openedMenu{
+            display: flex;
+        }
+        .aside{
+            display: block;
+            position: absolute;
+            width: 50%;
+            right: 0;
+            z-index: 1;
+        }
+        .aside:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            margin-left: -100%;
+        }
+    }
+}
+@media screen and (max-width:568px) {
+    .opened{
+        .aside{
+            display: block;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: 1;
+            padding:68px 20px;
+            box-sizing: border-box;
+        }
+    }
+    .main{
+        width: 100%;
+        padding:20px;
+        .joke{
+            padding: 47px 20px 20px;
+        }
+        .joke__data{
+            display: block;
+        }
+        .joke__category{
+            margin-top: 10px;
+        }
+    }
+
+    .main__burger{
+      margin-right: 20px;
+    }
+}
